@@ -102,7 +102,7 @@ console.log(deleteOne(string, boolean));
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs" // se la stringa include un numero elimina il numero
 */
-console.log("DA CONTROLLARE IL 5");
+
 function onlyLetters(string) {
   let result = "";
   for (let i = 0; i < string.length; i++) {
@@ -455,15 +455,29 @@ addBgcRed();
 */
 function addNewElement() {
   const myList = document.getElementById("myList");
+  const newElement = document.createElement("li");
+  const text = document.createTextNode("Coca-cola");
+  newElement.appendChild(text);
+  myList.appendChild(newElement);
 }
+addNewElement();
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
-
+function empty() {
+  const svuota = (document.getElementById("myList").innerText = " ");
+}
+empty();
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-
+function addClass() {
+  const allTr = document.getElementsByTagName("tr");
+  allTr.forEach((tr) => {
+    tr.classList.add("test");
+  });
+}
+addClass();
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
